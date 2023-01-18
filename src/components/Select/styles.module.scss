@@ -1,0 +1,58 @@
+$color-selected: #2aa1c0;
+$color-box: #ccc;
+$color-grey: lighten(#000, 40);
+$lightergrey-color: #e6e6e6;
+
+.select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    select {
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        padding: 10px 35px 10px 5px;
+        outline: 0;
+        border: 0;
+        border-radius: 0;
+        color: $color-grey;
+        appearance: none;
+        border-bottom: 1px solid #000;
+
+        &::-ms-expand {
+            display: none;
+        }
+        &:hover,
+        &:focus {
+            background: lighten($lightergrey-color, 2%);
+        }
+        &:disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 4px 35px 4px 12px;
+            line-height: 22px;
+        }
+    }
+
+    &:after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 70%;
+        width: 30px;
+        text-align: center;
+        padding-top: 12px;
+        padding-bottom: 10px;
+        pointer-events: none;
+        color: $color-grey;
+
+        @media screen and (max-width: 768px) {
+            padding-top: 7px;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.button {
+    cursor: pointer;
+    background: #09357b;
+    border: none;
+    padding: 5px 12px 4px 12px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    font-size: 0.8rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 4px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 11px;
+    }
+}

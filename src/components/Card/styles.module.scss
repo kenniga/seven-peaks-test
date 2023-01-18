@@ -1,0 +1,57 @@
+.card {
+    color: #fff;
+    position: relative;
+
+    h3:not(:last-child) {
+        margin-bottom: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+        aspect-ratio: 1/1;
+
+        h3 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    max-width: 100%;
+    display: block;
+
+    &.noThumbnail {
+        background: rgba(13, 71, 161, 1);
+        object-fit: contain;
+        object-position: top;
+        padding: 25%;
+    }
+}
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(9, 53, 123, 0.9);
+    padding: 10px 10px 14px 10px;
+    aspect-ratio: 350 / 134;
+    width: 100%;
+
+    p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    @media screen and (max-width: 768px) {
+        aspect-ratio: 350/100;
+    }
+}

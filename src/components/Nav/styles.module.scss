@@ -1,0 +1,13 @@
+.nav {
+    height: 126px;
+    background: #09357b;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}

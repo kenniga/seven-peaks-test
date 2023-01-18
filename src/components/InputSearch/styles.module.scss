@@ -1,0 +1,61 @@
+.label {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 12px 36px;
+    border-bottom: 2px solid #fff;
+    background: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    width: 90px;
+    transition: all 0.5s;
+
+    &.focused {
+        width: 300px;
+        background: rgba(255, 255, 255, 0.1);
+
+        input {
+            right: 36px;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 12px 24px;
+
+        &.focused {
+            width: 250px;
+        }
+    }
+}
+
+.searchIcon {
+    position: absolute;
+    right: 36px;
+    background: none;
+    border: none;
+}
+
+.input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 0;
+    color: #fff;
+
+    &::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: rgba(255, 255, 255, 0.5);
+        opacity: 1; /* Firefox */
+    }
+
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
